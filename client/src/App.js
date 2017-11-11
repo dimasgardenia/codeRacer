@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import firebase from './firebase'
 
+import Board from './components/board'
 import Login from './components/login'
 
 import logo from './logo.svg';
@@ -12,11 +13,12 @@ class App extends Component {
     return (
       <Router>
         <div className='app'>
-          <Route exact path='/login' component={Login} />
+          <Route exact path='/' component={Login} />
+          <Route exact path='/board' component={Board} />
         </div>
       </Router>
     );
   }
 }
 
-export default App;
+export default App
